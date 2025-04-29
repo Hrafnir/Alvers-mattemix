@@ -1,0 +1,209 @@
+/* Generell Styling & "Space" Tema Hint */
+:root {
+    --bg-color: #0a0a2a; /* Mørk blå/lilla */
+    --text-color: #f0f0f0; /* Lys grå/hvit */
+    --primary-color: #6a3d9a; /* Lilla */
+    --secondary-color: #ff7f00; /* Oransje/Gyllen */
+    --input-bg: #1a1a3a;
+    --border-color: #4a2a6a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 2px black;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+h3 {
+     color: var(--secondary-color);
+     margin-top: 1rem;
+     margin-bottom: 0.5rem;
+}
+
+/* Konverterer Spesifikk Styling */
+.converter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.input-group input[type="number"],
+.input-group select {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #2a2a4a;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.input-group select {
+     appearance: none; /* Fjerner standard pil */
+     background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%23f0f0f0" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>'); /* Legger til egen pil */
+     background-repeat: no-repeat;
+     background-position: right 0.7rem center;
+     background-size: 1em;
+     padding-right: 2rem; /* Plass til pilen */
+}
+
+
+.button-group {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+#convertButton {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    font-weight: bold;
+}
+
+#convertButton:hover {
+    background-color: #ff9f33; /* Lysere oransje */
+}
+
+#revealButton {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+#revealButton:hover {
+     background-color: #8a5dbf; /* Lysere lilla */
+}
+
+#revealButton:disabled {
+    background-color: #555;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+#resultArea {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #050515; /* Enda mørkere for resultat */
+    border: 1px dashed var(--secondary-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+#resultText {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    word-wrap: break-word; /* For veldig store tall */
+}
+
+#explanationArea {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: rgba(0,0,0, 0.2);
+    border-left: 4px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+#explanationSteps p {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+#explanationSteps strong {
+    color: var(--secondary-color);
+}
+
+/* Skjul/Vis */
+.hidden {
+    display: none;
+}
+
+/* Placeholder Seksjoner */
+.placeholder {
+    opacity: 0.6;
+    text-align: center;
+}
+.placeholder h2{
+    color: #aaa;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive justeringer (enkelt eksempel) */
+@media (max-width: 600px) {
+    .converter-grid {
+        grid-template-columns: 1fr; /* Stakk alt over hverandre */
+        gap: 1rem;
+    }
+     h1 {
+        font-size: 1.8rem;
+     }
+}
