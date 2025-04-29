@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnhetsUniverset - Konverterer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 EnhetsUniverset 🌌</h1>
+        <nav>
+            <!-- Senere: Legg til lenker til Treningssenter, Kunnskapsbase etc. -->
+        </nav>
+    </header>
+
+    <main>
+        <section id="konverterer">
+            <h2>SuperKonverteren™ ✨</h2>
+
+            <div class="converter-grid">
+                <div class="input-group">
+                    <label for="valueInput">Verdi:</label>
+                    <input type="number" id="valueInput" placeholder="Skriv inn tall...">
+                </div>
+
+                <div class="input-group">
+                    <label for="fromUnit">Fra enhet:</label>
+                    <select id="fromUnit">
+                        <option value="">-- Velg --</option>
+                        <optgroup label="📏 Lengde (1D)">
+                            <option value="mm">mm (Millimeter)</option>
+                            <option value="cm">cm (Centimeter)</option>
+                            <option value="dm">dm (Desimeter)</option>
+                            <option value="m">m (Meter)</option>
+                            <option value="km">km (Kilometer)</option>
+                        </optgroup>
+                        <optgroup label="🖼️ Areal (2D)">
+                            <option value="mm2">mm²</option>
+                            <option value="cm2">cm²</option>
+                            <option value="dm2">dm²</option>
+                            <option value="m2">m²</option>
+                            <option value="km2">km²</option>
+                            <option value="maal">Mål/Dekar</option>
+                            <option value="hektar">Hektar</option>
+                        </optgroup>
+                        <optgroup label="🧊 Volum - Rommål (3D)">
+                            <option value="mm3">mm³</option>
+                            <option value="cm3">cm³ (≈ mL)</option>
+                            <option value="dm3">dm³ (≈ L)</option>
+                            <option value="m3">m³</option>
+                        </optgroup>
+                        <optgroup label="💧 Volum - Litermål (3D)">
+                            <option value="ml">mL (Milliliter)</option>
+                            <option value="cl">cL (Centiliter)</option>
+                            <option value="dl">dL (Desiliter)</option>
+                            <option value="l">L (Liter)</option>
+                        </optgroup>
+                    </select>
+                </div>
+
+                 <div class="input-group">
+                    <label for="toUnit">Til enhet:</label>
+                    <select id="toUnit">
+                        <option value="">-- Velg --</option>
+                         <!-- Options populerers dynamisk eller kopieres fra "fromUnit" -->
+                         <!-- For enkelhets skyld, kopier <optgroup> her -->
+                         <optgroup label="📏 Lengde (1D)">
+                            <option value="mm">mm (Millimeter)</option>
+                            <option value="cm">cm (Centimeter)</option>
+                            <option value="dm">dm (Desimeter)</option>
+                            <option value="m">m (Meter)</option>
+                            <option value="km">km (Kilometer)</option>
+                        </optgroup>
+                        <optgroup label="🖼️ Areal (2D)">
+                            <option value="mm2">mm²</option>
+                            <option value="cm2">cm²</option>
+                            <option value="dm2">dm²</option>
+                            <option value="m2">m²</option>
+                            <option value="km2">km²</option>
+                            <option value="maal">Mål/Dekar</option>
+                            <option value="hektar">Hektar</option>
+                        </optgroup>
+                        <optgroup label="🧊 Volum - Rommål (3D)">
+                            <option value="mm3">mm³</option>
+                            <option value="cm3">cm³ (≈ mL)</option>
+                            <option value="dm3">dm³ (≈ L)</option>
+                            <option value="m3">m³</option>
+                        </optgroup>
+                        <optgroup label="💧 Volum - Litermål (3D)">
+                            <option value="ml">mL (Milliliter)</option>
+                            <option value="cl">cL (Centiliter)</option>
+                            <option value="dl">dL (Desiliter)</option>
+                            <option value="l">L (Liter)</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button id="convertButton">Konverter!</button>
+                <button id="revealButton" disabled>Avslør Hemmeligheten 🤫</button>
+            </div>
+
+            <div id="resultArea">
+                <p id="resultText">Resultatet vises her...</p>
+            </div>
+
+            <div id="explanationArea" class="hidden">
+                <h3>Steg-for-steg forklaring:</h3>
+                <div id="explanationSteps">
+                    <!-- Forklaring genereres her av JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section id="placeholder-training" class="placeholder">
+            <h2>DimensjonsAkademiet 🎓 (Kommer Snart)</h2>
+            <p>Her vil du kunne øve deg med quizer og utfordringer!</p>
+        </section>
+
+         <section id="placeholder-knowledge" class="placeholder">
+            <h2>HoloBiblioteket 📚 (Kommer Snart)</h2>
+            <p>Utforsk interaktive moduler om enheter og dimensjoner.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Laget med kode-magi ✨</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
